@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watch Ads & Earn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GigaPub Ads Script -->
+  <script src="https://ad.gigapub.tech/script?id=1822"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Watch Ads & Earn</h1>
+    <p>Your Balance: <span id="balance">0</span> Points</p>
+
+    <button id="watchAdBtn">▶ Watch Ad</button>
+    <button id="withdrawBtn" disabled>💰 Withdraw</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
