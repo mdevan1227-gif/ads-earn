@@ -1,0 +1,2 @@
+# ads-earn
+Earn money
