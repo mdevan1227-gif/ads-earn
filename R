@@ -1,0 +1,27 @@
+let balance = 0;
+const balanceEl = document.getElementById("balance");
+const watchAdBtn = document.getElementById("watchAdBtn");
+const withdrawBtn = document.getElementById("withdrawBtn");
+const messageEl = document.getElementById("message");
+
+watchAdBtn.addEventListener("click", () => {
+  window.showGiga()
+    .then(() => {
+      balance += 10; // Reward per ad
+      balanceEl.textContent = balance;
+      messageEl.textContent = "✅ You earned 10 points!";
+      if (balance >= 200) {
+        withdrawBtn.disabled = false;
+      }
+    })
+    .catch(() => {
+      messageEl.textContent = "⚠️ Ad failed to load.";
+    });
+});
+
+withdrawBtn.addEventListener("click", () => {
+  messageEl.textContent = "💵 Withdrawal request submitted!";
+  balance = 0;
+  balanceEl.textContent = balance;
+  withdrawBtn.disabled = true;
+});
